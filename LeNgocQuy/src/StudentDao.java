@@ -12,11 +12,6 @@ import java.util.List;
 public class StudentDao {
 	private static final String STUDENT_FILE_NAME = "student.txt";
 	 
-    /**
-     * save list student to file
-     * 
-     * @param studentList: list student to save
-     */
     public void write(List<Student> studentList) {
         FileOutputStream fos = null;
         ObjectOutputStream oos = null;
@@ -34,11 +29,7 @@ public class StudentDao {
         }
     }
  
-    /**
-     * read list student from file
-     * 
-     * @return list student
-     */
+
     public List<Student> read() {
         List<Student> studentList = new ArrayList<>();
         FileInputStream fis = null;
@@ -60,11 +51,7 @@ public class StudentDao {
         return studentList;
     }
  
-    /**
-     * close input stream
-     * 
-     * @param is: input stream
-     */
+
     private void closeStream(InputStream is) {
         if (is != null) {
             try {
@@ -75,11 +62,7 @@ public class StudentDao {
         }
     }
  
-    /**
-     * close output stream
-     * 
-     * @param os: output stream
-     */
+
     private void closeStream(OutputStream os) {
         if (os != null) {
             try {
